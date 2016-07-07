@@ -77,12 +77,12 @@
 		310631AA1D2EEA7800841206 /* sichallenge */ = {
 			isa = PBXGroup;
 			children = (
-				310631AB1D2EEA7800841206 /* AppDelegate.swift */,
-				310631AD1D2EEA7800841206 /* ViewController.swift */,
-				310631AF1D2EEA7800841206 /* Main.storyboard */,
-				310631B21D2EEA7800841206 /* Assets.xcassets */,
-				310631B41D2EEA7800841206 /* LaunchScreen.storyboard */,
-				310631B71D2EEA7800841206 /* Info.plist */,
+				31EB9DC31D2EED07000561CC /* Connectivity */,
+				31EB9DC41D2EED19000561CC /* Storyboards */,
+				31EB9DC51D2EED24000561CC /* Support */,
+				31EB9DC61D2EED2D000561CC /* TableViewCells */,
+				31EB9DC71D2EED5F000561CC /* ViewControllers */,
+				31EB9DC81D2EED67000561CC /* ViewModels */,
 			);
 			path = sichallenge;
 			sourceTree = "<group>";
@@ -94,6 +94,54 @@
 				310631C21D2EEA7800841206 /* Info.plist */,
 			);
 			path = sichallengeTests;
+			sourceTree = "<group>";
+		};
+		31EB9DC31D2EED07000561CC /* Connectivity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Connectivity;
+			sourceTree = "<group>";
+		};
+		31EB9DC41D2EED19000561CC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				310631B41D2EEA7800841206 /* LaunchScreen.storyboard */,
+				310631AF1D2EEA7800841206 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		31EB9DC51D2EED24000561CC /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				310631AB1D2EEA7800841206 /* AppDelegate.swift */,
+				310631B21D2EEA7800841206 /* Assets.xcassets */,
+				310631B71D2EEA7800841206 /* Info.plist */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		31EB9DC61D2EED2D000561CC /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		31EB9DC71D2EED5F000561CC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				310631AD1D2EEA7800841206 /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		31EB9DC81D2EED67000561CC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,6 +450,7 @@
 				310631C71D2EEA7800841206 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		310631C81D2EEA7800841206 /* Build configuration list for PBXNativeTarget "sichallengeTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +459,7 @@
 				310631CA1D2EEA7800841206 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
