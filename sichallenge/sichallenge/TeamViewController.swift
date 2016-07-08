@@ -80,7 +80,6 @@ extension TeamViewController { // UICollectionViewDelegate
                 alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 
                 self.present(alertController, animated: true, completion: nil)
-                
             }
         }
     }
@@ -90,6 +89,9 @@ extension TeamViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: (collectionView.bounds.width - 8) / 3, height: 160)
+        let width = (collectionView.bounds.width - 8) / 3
+        let height = width * 1.5
+        
+        return CGSize(width: width, height: height)
     }
 }
