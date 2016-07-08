@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		310631AC1D2EEA7800841206 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310631AB1D2EEA7800841206 /* AppDelegate.swift */; };
-		310631AE1D2EEA7800841206 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310631AD1D2EEA7800841206 /* ViewController.swift */; };
+		310631AE1D2EEA7800841206 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310631AD1D2EEA7800841206 /* TeamViewController.swift */; };
 		310631B11D2EEA7800841206 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310631AF1D2EEA7800841206 /* Main.storyboard */; };
 		310631B31D2EEA7800841206 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 310631B21D2EEA7800841206 /* Assets.xcassets */; };
 		310631B61D2EEA7800841206 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310631B41D2EEA7800841206 /* LaunchScreen.storyboard */; };
-		310631C11D2EEA7800841206 /* sichallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310631C01D2EEA7800841206 /* sichallengeTests.swift */; };
+		315E98461D2F2B69000F32CB /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E98451D2F2B69000F32CB /* TeamViewModel.swift */; };
+		315E98481D2F2C7B000F32CB /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E98471D2F2C7B000F32CB /* PlayerViewModel.swift */; };
+		315E984B1D2F38DB000F32CB /* PlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E984A1D2F38DB000F32CB /* PlayerCollectionViewCell.swift */; };
 		316097F61D2EF10100622350 /* SIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316097F51D2EF10100622350 /* SIClient.swift */; };
 		316097F91D2EF3B400622350 /* SIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316097F81D2EF3B400622350 /* SIClientTests.swift */; };
 		316097FD1D2F156000622350 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316097FC1D2F156000622350 /* TeamModel.swift */; };
@@ -35,14 +37,16 @@
 /* Begin PBXFileReference section */
 		310631A81D2EEA7800841206 /* sichallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sichallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		310631AB1D2EEA7800841206 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		310631AD1D2EEA7800841206 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		310631AD1D2EEA7800841206 /* TeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
 		310631B01D2EEA7800841206 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		310631B21D2EEA7800841206 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		310631B51D2EEA7800841206 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		310631B71D2EEA7800841206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		310631BC1D2EEA7800841206 /* sichallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sichallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		310631C01D2EEA7800841206 /* sichallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sichallengeTests.swift; sourceTree = "<group>"; };
 		310631C21D2EEA7800841206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		315E98451D2F2B69000F32CB /* TeamViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
+		315E98471D2F2C7B000F32CB /* PlayerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		315E984A1D2F38DB000F32CB /* PlayerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCollectionViewCell.swift; sourceTree = "<group>"; };
 		316097F51D2EF10100622350 /* SIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIClient.swift; sourceTree = "<group>"; };
 		316097F81D2EF3B400622350 /* SIClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIClientTests.swift; sourceTree = "<group>"; };
 		316097FC1D2F156000622350 /* TeamModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
@@ -105,10 +109,18 @@
 			isa = PBXGroup;
 			children = (
 				316097F71D2EF39E00622350 /* Connectivity */,
-				310631C01D2EEA7800841206 /* sichallengeTests.swift */,
 				310631C21D2EEA7800841206 /* Info.plist */,
 			);
 			path = sichallengeTests;
+			sourceTree = "<group>";
+		};
+		315E98491D2F2FD5000F32CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				316098021D2F1F0900622350 /* PlayerModel.swift */,
+				316097FC1D2F156000622350 /* TeamModel.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		316097F71D2EF39E00622350 /* Connectivity */ = {
@@ -122,12 +134,11 @@
 		31EB9DC31D2EED07000561CC /* Connectivity */ = {
 			isa = PBXGroup;
 			children = (
+				315E98491D2F2FD5000F32CB /* Models */,
 				31EB9DC91D2EEF7B000561CC /* Client.swift */,
 				316097FE1D2F18D800622350 /* ParamsFormatter.swift */,
-				316098021D2F1F0900622350 /* PlayerModel.swift */,
 				316098001D2F1CF300622350 /* Request.swift */,
 				316097F51D2EF10100622350 /* SIClient.swift */,
-				316097FC1D2F156000622350 /* TeamModel.swift */,
 			);
 			name = Connectivity;
 			sourceTree = "<group>";
@@ -154,6 +165,7 @@
 		31EB9DC61D2EED2D000561CC /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				315E984A1D2F38DB000F32CB /* PlayerCollectionViewCell.swift */,
 			);
 			name = CollectionViewCells;
 			sourceTree = "<group>";
@@ -161,7 +173,7 @@
 		31EB9DC71D2EED5F000561CC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				310631AD1D2EEA7800841206 /* ViewController.swift */,
+				310631AD1D2EEA7800841206 /* TeamViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -169,6 +181,8 @@
 		31EB9DC81D2EED67000561CC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				315E98451D2F2B69000F32CB /* TeamViewModel.swift */,
+				315E98471D2F2C7B000F32CB /* PlayerViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -281,13 +295,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				316097F61D2EF10100622350 /* SIClient.swift in Sources */,
+				315E98481D2F2C7B000F32CB /* PlayerViewModel.swift in Sources */,
+				315E98461D2F2B69000F32CB /* TeamViewModel.swift in Sources */,
 				316098011D2F1CF300622350 /* Request.swift in Sources */,
 				316098031D2F1F0900622350 /* PlayerModel.swift in Sources */,
-				310631AE1D2EEA7800841206 /* ViewController.swift in Sources */,
+				310631AE1D2EEA7800841206 /* TeamViewController.swift in Sources */,
 				316097FD1D2F156000622350 /* TeamModel.swift in Sources */,
 				316097FF1D2F18D800622350 /* ParamsFormatter.swift in Sources */,
 				310631AC1D2EEA7800841206 /* AppDelegate.swift in Sources */,
 				31EB9DCA1D2EEF7B000561CC /* Client.swift in Sources */,
+				315E984B1D2F38DB000F32CB /* PlayerCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +313,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				316097F91D2EF3B400622350 /* SIClientTests.swift in Sources */,
-				310631C11D2EEA7800841206 /* sichallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

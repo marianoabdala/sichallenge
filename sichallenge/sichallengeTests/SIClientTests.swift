@@ -51,8 +51,8 @@ class SIClientTests: XCTestCase {
         let client = SIClient()
         let waitExpectation = expectation(withDescription: "Wait for post to return.")
         
-        let player = PlayerModel(id: 1, firstName: "Mariano", lastName: "Abdala")
-        let team = TeamModel(id: 1)
+        let player = PlayerModel(with: ["Id": 1, "FirstName": "Mariano", "LastName": "Abdala"])
+        let team = TeamModel(with: ["Id": 1, "Name": "Eagles"])
         
         client.postPlayerTapped(player, from: team, completionHandler: {
             
@@ -73,8 +73,8 @@ class SIClientTests: XCTestCase {
         let client = TestClient()
         let waitExpectation = expectation(withDescription: "Wait for post to return.")
         
-        let player = PlayerModel(id: 1, firstName: "Mariano", lastName: "Abdala")
-        let team = TeamModel(id: 1)
+        let player = PlayerModel(with: ["Id": 1, "FirstName": "Mariano", "LastName": "Abdala"])
+        let team = TeamModel(with: ["Id": 1, "Name": "Eagles"])
         
         client.postPlayerTapped(player, from: team, completionHandler: {
             
