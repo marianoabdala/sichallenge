@@ -13,6 +13,13 @@
 		310631B31D2EEA7800841206 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 310631B21D2EEA7800841206 /* Assets.xcassets */; };
 		310631B61D2EEA7800841206 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310631B41D2EEA7800841206 /* LaunchScreen.storyboard */; };
 		310631C11D2EEA7800841206 /* sichallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310631C01D2EEA7800841206 /* sichallengeTests.swift */; };
+		316097F61D2EF10100622350 /* SIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316097F51D2EF10100622350 /* SIClient.swift */; };
+		316097F91D2EF3B400622350 /* SIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316097F81D2EF3B400622350 /* SIClientTests.swift */; };
+		316097FD1D2F156000622350 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316097FC1D2F156000622350 /* TeamModel.swift */; };
+		316097FF1D2F18D800622350 /* ParamsFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316097FE1D2F18D800622350 /* ParamsFormatter.swift */; };
+		316098011D2F1CF300622350 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316098001D2F1CF300622350 /* Request.swift */; };
+		316098031D2F1F0900622350 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316098021D2F1F0900622350 /* PlayerModel.swift */; };
+		31EB9DCA1D2EEF7B000561CC /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EB9DC91D2EEF7B000561CC /* Client.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +43,13 @@
 		310631BC1D2EEA7800841206 /* sichallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sichallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		310631C01D2EEA7800841206 /* sichallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sichallengeTests.swift; sourceTree = "<group>"; };
 		310631C21D2EEA7800841206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		316097F51D2EF10100622350 /* SIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIClient.swift; sourceTree = "<group>"; };
+		316097F81D2EF3B400622350 /* SIClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIClientTests.swift; sourceTree = "<group>"; };
+		316097FC1D2F156000622350 /* TeamModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
+		316097FE1D2F18D800622350 /* ParamsFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParamsFormatter.swift; sourceTree = "<group>"; };
+		316098001D2F1CF300622350 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		316098021D2F1F0900622350 /* PlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		31EB9DC91D2EEF7B000561CC /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +94,7 @@
 				31EB9DC31D2EED07000561CC /* Connectivity */,
 				31EB9DC41D2EED19000561CC /* Storyboards */,
 				31EB9DC51D2EED24000561CC /* Support */,
-				31EB9DC61D2EED2D000561CC /* TableViewCells */,
+				31EB9DC61D2EED2D000561CC /* CollectionViewCells */,
 				31EB9DC71D2EED5F000561CC /* ViewControllers */,
 				31EB9DC81D2EED67000561CC /* ViewModels */,
 			);
@@ -90,15 +104,30 @@
 		310631BF1D2EEA7800841206 /* sichallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				316097F71D2EF39E00622350 /* Connectivity */,
 				310631C01D2EEA7800841206 /* sichallengeTests.swift */,
 				310631C21D2EEA7800841206 /* Info.plist */,
 			);
 			path = sichallengeTests;
 			sourceTree = "<group>";
 		};
+		316097F71D2EF39E00622350 /* Connectivity */ = {
+			isa = PBXGroup;
+			children = (
+				316097F81D2EF3B400622350 /* SIClientTests.swift */,
+			);
+			name = Connectivity;
+			sourceTree = "<group>";
+		};
 		31EB9DC31D2EED07000561CC /* Connectivity */ = {
 			isa = PBXGroup;
 			children = (
+				31EB9DC91D2EEF7B000561CC /* Client.swift */,
+				316097FE1D2F18D800622350 /* ParamsFormatter.swift */,
+				316098021D2F1F0900622350 /* PlayerModel.swift */,
+				316098001D2F1CF300622350 /* Request.swift */,
+				316097F51D2EF10100622350 /* SIClient.swift */,
+				316097FC1D2F156000622350 /* TeamModel.swift */,
 			);
 			name = Connectivity;
 			sourceTree = "<group>";
@@ -122,11 +151,11 @@
 			name = Support;
 			sourceTree = "<group>";
 		};
-		31EB9DC61D2EED2D000561CC /* TableViewCells */ = {
+		31EB9DC61D2EED2D000561CC /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = TableViewCells;
+			name = CollectionViewCells;
 			sourceTree = "<group>";
 		};
 		31EB9DC71D2EED5F000561CC /* ViewControllers */ = {
@@ -251,8 +280,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				316097F61D2EF10100622350 /* SIClient.swift in Sources */,
+				316098011D2F1CF300622350 /* Request.swift in Sources */,
+				316098031D2F1F0900622350 /* PlayerModel.swift in Sources */,
 				310631AE1D2EEA7800841206 /* ViewController.swift in Sources */,
+				316097FD1D2F156000622350 /* TeamModel.swift in Sources */,
+				316097FF1D2F18D800622350 /* ParamsFormatter.swift in Sources */,
 				310631AC1D2EEA7800841206 /* AppDelegate.swift in Sources */,
+				31EB9DCA1D2EEF7B000561CC /* Client.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				316097F91D2EF3B400622350 /* SIClientTests.swift in Sources */,
 				310631C11D2EEA7800841206 /* sichallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
