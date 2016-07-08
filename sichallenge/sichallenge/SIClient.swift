@@ -53,7 +53,7 @@ class SIClient: Client {
         
         Request.request(urlString: requestURLString, on: self.defaultSession, completionHandler: { (data) in
 
-            let response = String(data)
+            let response = String(data: data, encoding: .utf8)
             
             if response == "OK" {
                 
@@ -61,7 +61,14 @@ class SIClient: Client {
                 
             } else {
                 
-                errorHandler(message: response)
+                if let response = response {
+                    
+                    errorHandler(message: response)
+                    
+                } else {
+                
+                    errorHandler(message: "Invalid response")
+                }
             }
         },
         errorHandler: errorHandler)

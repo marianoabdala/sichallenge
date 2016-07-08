@@ -68,6 +68,22 @@ extension TeamViewController { // UICollectionViewDataSource
 
 extension TeamViewController { // UICollectionViewDelegate
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let player = self.viewModel.players[indexPath.row]
+        
+        self.viewModel.recordSelected(player) {
+
+            if self.viewModel.hasError {
+                
+                let alertController = UIAlertController(title: "Error", message: self.viewModel.errorMessage, preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                
+                self.present(alertController, animated: true, completion: nil)
+                
+            }
+        }
+    }
 }
 
 extension TeamViewController: UICollectionViewDelegateFlowLayout {

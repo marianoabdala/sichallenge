@@ -11,6 +11,7 @@ class TeamViewModel {
     var players = [PlayerViewModel]()
     
     private let client: Client
+    private var teamModel: TeamModel?
     
     init(withClient client: Client) {
         
@@ -26,11 +27,10 @@ class TeamViewModel {
                 return
             }
             
-            let teamModel = TeamModel(with: responseDictionary)
+            strongSelf.teamModel = TeamModel(with: responseDictionary)
+            strongSelf.name = strongSelf.teamModel?.name ?? "[Unknown]"
             
-            strongSelf.name = teamModel.name ?? "[Unknown]"
-            
-            if let color = teamModel.color {
+            if let color = strongSelf.teamModel?.color {
             
                 strongSelf.color = strongSelf.hexStringToUIColor(hex: color)
             }
@@ -57,6 +57,30 @@ class TeamViewModel {
             
             strongSelf.hasError = true
             strongSelf.errorMessage = message
+            
+            DispatchQueue.main.async(execute: completionHandler)
+        })
+    }
+    
+    func recordSelected(_ player: PlayerViewModel, completionHandler:() -> ()) {
+     
+        guard let teamModel = self.teamModel else {
+            
+            self.hasError = true
+            self.errorMessage = "Record selected with missing team model."
+            
+            completionHandler()
+            return
+        }
+        
+        self.client.postPlayerTapped(player.model, from: teamModel, completionHandler: {
+            
+            //All good.
+        },
+        errorHandler: { [weak self] message in
+            
+            self?.hasError = true
+            self?.errorMessage = message
             
             DispatchQueue.main.async(execute: completionHandler)
         })

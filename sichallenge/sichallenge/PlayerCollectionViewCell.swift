@@ -21,6 +21,7 @@ class PlayerCollectionViewCell: UICollectionViewCell {
             self.backgroundColor = viewModel.color
             self.nameLabel.text = viewModel.name
             self.numberLabel.text = viewModel.number
+            self.photoImageView.image = viewModel.photo
             
             viewModel.fetchPhoto { [weak self] in
                 
