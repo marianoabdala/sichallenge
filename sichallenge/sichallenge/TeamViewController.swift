@@ -2,8 +2,8 @@ import UIKit
 
 class TeamViewController: UICollectionViewController {
 
-    private let viewModel = TeamViewModel(withClient: SIClient())
-    private let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    let viewModel = TeamViewModel(withClient: SIClient())
+    let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
 
     override func viewDidLoad() {
         
@@ -17,9 +17,9 @@ class TeamViewController: UICollectionViewController {
     }
 }
 
-extension TeamViewController {
+private extension TeamViewController {
     
-    private func setupNavigationBar() {
+    func setupNavigationBar() {
         
         self.activityIndicatorView.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
         self.activityIndicatorView.startAnimating()
@@ -27,7 +27,7 @@ extension TeamViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: self.activityIndicatorView)
     }
     
-    private func updateUI() {
+    func updateUI() {
         
         if self.viewModel.hasError {
         

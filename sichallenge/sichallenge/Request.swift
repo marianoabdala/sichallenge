@@ -2,11 +2,11 @@ import Foundation
 
 struct Request {
     
-    static func request(urlString: String, on urlSession: URLSession, completionHandler: (Data) -> (), errorHandler: (message: String) -> ()) {
+    static func request(urlString: String, on urlSession: URLSession, completionHandler: @escaping (Data) -> (), errorHandler: @escaping (_ message: String) -> ()) {
         
         guard let requestURL = URL(string: urlString) else {
             
-            errorHandler(message: "An error occurred formatting the fetch URL: \(urlString)")
+            errorHandler("An error occurred formatting the fetch URL: \(urlString)")
             return
         }
         
@@ -16,13 +16,13 @@ struct Request {
             
             guard let _ = response else {
                 
-                errorHandler(message: "Please check your internet connection. Server may be down.")
+                errorHandler("Please check your internet connection. Server may be down.")
                 return
             }
             
             guard let httpResponse = response as? HTTPURLResponse else {
                 
-                errorHandler(message: "Invalid server response type.")
+                errorHandler("Invalid server response type.")
                 return
             }
             
@@ -30,13 +30,13 @@ struct Request {
             
             guard statusCode == 200 else {
                 
-                errorHandler(message: "Invalid response code: \(statusCode)")
+                errorHandler("Invalid response code: \(statusCode)")
                 return
             }
             
             guard let data = data else {
                 
-                errorHandler(message: "Invalid response Data (empty).")
+                errorHandler("Invalid response Data (empty).")
                 return
             }
             

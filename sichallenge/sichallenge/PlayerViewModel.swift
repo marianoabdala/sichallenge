@@ -25,9 +25,9 @@ class PlayerViewModel {
         self.number = model.number ?? "??"
     }
     
-    func fetchPhoto(withCompletion completionHandler: () -> ()) {
+    func fetchPhoto(withCompletion completionHandler: @escaping () -> ()) {
         
-        guard let url = self.model.photoUrl where self.isFetchingPhoto == false else {
+        guard let url = self.model.photoUrl, self.isFetchingPhoto == false else {
             
             return
         }
@@ -43,8 +43,8 @@ class PlayerViewModel {
         let downloadThumbnailTask = URLSession.shared.downloadTask(with: url) { [weak self] (url, urlResponse, error) in
             
             guard let url = url,
-                data = NSData(contentsOf: url),
-                image = UIImage(data: data as Data) else {
+                let data = NSData(contentsOf: url),
+                let image = UIImage(data: data as Data) else {
                     
                     return
             }

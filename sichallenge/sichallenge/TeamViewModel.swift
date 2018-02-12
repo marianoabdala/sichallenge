@@ -7,7 +7,7 @@ class TeamViewModel {
     var errorMessage: String? = nil
 
     var name: String = ""
-    var color: UIColor = UIColor.lightGray()
+    var color: UIColor = UIColor.lightGray
     var players = [PlayerViewModel]()
     
     private let client: Client
@@ -18,7 +18,7 @@ class TeamViewModel {
         self.client = client
     }
     
-    func loadTeam(withCompletion completionHandler:() -> ()) {
+    func loadTeam(withCompletion completionHandler: @escaping () -> ()) {
         
         self.client.fetch(completionHandler: { [weak self] responseDictionary in
             
@@ -62,7 +62,7 @@ class TeamViewModel {
         })
     }
     
-    func recordSelected(_ player: PlayerViewModel, completionHandler:() -> ()) {
+    func recordSelected(_ player: PlayerViewModel, completionHandler:@escaping () -> ()) {
      
         guard let teamModel = self.teamModel else {
             
@@ -87,10 +87,10 @@ class TeamViewModel {
     }
 }
 
-extension TeamViewModel {
+private extension TeamViewModel {
     
     // "Borrowed" from: http://stackoverflow.com/questions/24263007/how-to-use-hex-colour-values-in-swift-ios
-    private func hexStringToUIColor (hex:String) -> UIColor {
+    func hexStringToUIColor (hex:String) -> UIColor {
         
         var rgbValue:UInt32 = 0
         Scanner(string: hex).scanHexInt32(&rgbValue)

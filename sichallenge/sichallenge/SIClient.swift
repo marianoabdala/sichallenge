@@ -10,7 +10,7 @@ class SIClient: Client {
      - parameter completionHandler: Called when completed successfully. Returns dictionary.
      - parameter errorHandler:      Returns error message.
      */
-    func fetch(completionHandler: ([String : AnyObject]) -> (), errorHandler: (message: String) -> ()) {
+    func fetch(completionHandler: @escaping ([String : AnyObject]) -> (), errorHandler: @escaping (_ message: String) -> ()) {
         
         let requestURLString = "http://iscoresports.com/bcl/challenge/team.json"
 
@@ -20,7 +20,7 @@ class SIClient: Client {
                 
                 guard let dictionary = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: AnyObject] else {
                     
-                    errorHandler(message: "An error occurrred parsing the response.")
+                    errorHandler("An error occurrred parsing the response.")
                     return
                 }
                 
@@ -28,7 +28,7 @@ class SIClient: Client {
                 
             } catch {
                 
-                errorHandler(message: "An error occurrred parsing the response.")
+                errorHandler("An error occurrred parsing the response.")
             }
         },
         errorHandler: errorHandler)
@@ -42,7 +42,7 @@ class SIClient: Client {
      - parameter completionHandler: Called when completed successfully.
      - parameter errorHandler:      Returns error message.
      */
-    func postPlayerTapped(_ player: PlayerModel, from team: TeamModel, completionHandler:() -> (), errorHandler:(message: String) -> ()) {
+    func postPlayerTapped(_ player: PlayerModel, from team: TeamModel, completionHandler: @escaping () -> (), errorHandler: @escaping (_ message: String) -> ()) {
         
         let params = ["teamid": String(team.id),
                       "playerid": String(player.id),
@@ -63,11 +63,11 @@ class SIClient: Client {
                 
                 if let response = response {
                     
-                    errorHandler(message: response)
+                    errorHandler(response)
                     
                 } else {
                 
-                    errorHandler(message: "Invalid response")
+                    errorHandler("Invalid response")
                 }
             }
         },
